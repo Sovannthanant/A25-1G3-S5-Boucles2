@@ -20,6 +20,17 @@ def retrait(solde: float, montant: float) -> float:
     print(f"* Retrait effectué: {montant} $")
     return solde
 
+def confirmation_retrait():
+    while True:
+        confirmation = str.lower(input("Voulez vous faire plus de retrait? "))
+        if confirmation == "oui":
+            retrait(solde, montant)
+            break
+        elif confirmation == "non":
+            break
+        else:
+            print("Veuillez écrire oui ou non.")
+
 
 if __name__ == "__main__":
     MONTANT_INITIAL = 1000
@@ -36,6 +47,8 @@ if __name__ == "__main__":
 
     retrait_2 = float(input("Retrait 2: Combien voulez-vous retirer? "))
     solde = retrait(solde, retrait_2)
+
+    confirmation_retrait()
 
     print("*********************")
     print(f"Solde initial: {MONTANT_INITIAL} $")
