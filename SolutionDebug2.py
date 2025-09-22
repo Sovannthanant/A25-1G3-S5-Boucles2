@@ -43,3 +43,5 @@ if __name__ == "__main__":
     print(f"Retrait 2:     {retrait_2} $")
     print(f"Solde final:   {solde} $")
     print("*********************")
+
+    print()
